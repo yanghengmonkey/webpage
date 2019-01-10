@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <!-- HEAD -->
+    <head>
+        <meta charset='UTF-8'>
+        {% load staticfiles %}
+        <link rel='stylesheet' type='text/css' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css' >
+        <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Satisfy' >
+        <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js'></script>
+        <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+        <link rel='stylesheet' type='text/css' href='{% static 'home/style.css' %}'>
+        <title>{% block title %}Henry{% endblock %}</title>
+    </head>
+    <!-- BODY -->
+    <body>
+        <nav class='navbar navbar-inverse'>
+            <div class='container-fluid'>
+                <!-- header -->
+                <div class='navbar-header'>
+                    <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='#topNavBar'>
+                        <span class='icon-bar'></span>
+                        <span class='icon-bar'></span>
+                        <span class='icon-bar'></span>
+                    </button>
+                    <a class='navbar-brand' href='{% url 'home:index' %}'>Henry</a>
+                </div>
+                <!-- ITEMS -->
+                <div class='collapse navbar-collapse' id='topNavBar'>
+                    <ui class='nav navbar-nav'>
+                        <!-- BLOG -->
+                        <li class=''>
+                            <a href="{% url 'blog:index' %}">
+                                <!-- <img src='{% static 'home/images/henry_head_portrait.jpg' %}' height='16' width='16'> -->
+                                Blog
+                            </a>
+                        </li>
+                    </ui>
+
+                    <!-- Search -->
+                    <form class="navbar-form navbar-left" role="search" method="get" action="#">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="q" value="">
+                        </div>
+                        <button type="submit" class="btn btn-default">
+                            Search
+                        </button>
+                    </form>
+
+                </div>
+            </div>
+        </nav>
+        <!-- user define body -->
+        {% block body %}
+        {% endblock %}
+    </body>
+</html>
