@@ -4,14 +4,18 @@ Henry's Blog
 {% endblock %}
 
 {% block body %}
-    <h2>
-        This is my blog
-    </h2>
-    {% for post in all_posts %}
-        <ul>
-            <li href="{% url 'blog:detail' %}">
-                <a>{{ post }}</a>
-            </li>
-        </ul>
-    {% endfor %}
+    <div class='jumbotron jumbotron-fluid container'>
+        <h1 class='display-4 text-center'>Welcome to henry's blog!!!</h1>
+        <p class='text-center'> Here are all my blogs </p>
+    </div>
+    <div class='list-group'>
+         {% for post in all_posts %}
+             <div class='list-group-item:first-child'>
+                 <h2>{{ post.title }}</h2>
+                 <a href="{% url 'blog:detail' post.id %}" class="btn btn-primary btn-sm" role="button">
+                     View Detail
+                 </a>
+             </div>
+         {% endfor %}
+    </div>
 {% endblock %}

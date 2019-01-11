@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e5f838a-8aae-4700-bfb9-30ec843a7e5a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webpage.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webpage.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/henry_homepage/blog/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/henry_homepage/blog/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/henry_homepage/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/henry_homepage/blog/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/henry_homepage/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/henry_homepage/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/henry_homepage/blog/templates/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/henry_homepage/blog/templates/blog/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/henry_homepage/blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/henry_homepage/blog/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/henry_homepage/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/henry_homepage/blog/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/henry_homepage/henry_homepage/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/henry_homepage/henry_homepage/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/henry_homepage/henry_homepage/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/henry_homepage/henry_homepage/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,29 +15,26 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/henry_homepage/home/templates/home/index.html">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/henry_homepage/blog/models.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/henry_homepage/templates/base/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="150">
+              <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/henry_homepage/blog/admin.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/henry_homepage/blog/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="25" lean-forward="true" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+            <state relative-caret-position="125">
+              <caret line="5" column="11" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="12" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -47,12 +43,49 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/henry_homepage/manage.py">
+        <entry file="file://$PROJECT_DIR$/henry_homepage/home/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+            <state>
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/henry_homepage/henry_homepage/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/henry_homepage/blog/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/henry_homepage/blog/templates/blog/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/henry_homepage/blog/templates/blog/detail.html">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -66,20 +99,24 @@
         <option value="$PROJECT_DIR$/henry_homepage/home/templates/henry/base.html" />
         <option value="$PROJECT_DIR$/henry_homepage/blog/admin.py" />
         <option value="$PROJECT_DIR$/henry_homepage/blog/models.py" />
+        <option value="$PROJECT_DIR$/henry_homepage/blog/templates/blog/index.html" />
+        <option value="$PROJECT_DIR$/henry_homepage/blog/urls.py" />
+        <option value="$PROJECT_DIR$/henry_homepage/blog/views.py" />
+        <option value="$PROJECT_DIR$/henry_homepage/henry_homepage/urls.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="952" />
-    <option name="width" value="977" />
-    <option name="height" value="1038" />
+    <option name="x" value="307" />
+    <option name="y" value="545" />
+    <option name="width" value="1894" />
+    <option name="height" value="913" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -102,12 +139,53 @@
               <item name="webpage" type="b2602c69:ProjectViewProjectNode" />
               <item name="webpage" type="462c0819:PsiDirectoryNode" />
               <item name="henry_homepage" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webpage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webpage" type="462c0819:PsiDirectoryNode" />
+              <item name="henry_homepage" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webpage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webpage" type="462c0819:PsiDirectoryNode" />
+              <item name="henry_homepage" type="462c0819:PsiDirectoryNode" />
+              <item name="henry_homepage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webpage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webpage" type="462c0819:PsiDirectoryNode" />
+              <item name="henry_homepage" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webpage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webpage" type="462c0819:PsiDirectoryNode" />
+              <item name="henry_homepage" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webpage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webpage" type="462c0819:PsiDirectoryNode" />
+              <item name="henry_homepage" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="webpage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webpage" type="462c0819:PsiDirectoryNode" />
+              <item name="henry_homepage" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -140,9 +218,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="762" y="0" width="781" height="830" extended-state="0" />
+    <frame x="307" y="545" width="1894" height="913" extended-state="1" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.34630874" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30892572" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -163,9 +242,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/henry_homepage/home/templates/henry/base.html" />
-    <entry file="file://$PROJECT_DIR$/henry_homepage/home/templates/home/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/henry_homepage/manage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -189,6 +265,62 @@
           <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/henry_homepage/blog/templates/blog/detail.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/henry_homepage/home/templates/home/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/henry_homepage/templates/base/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/henry_homepage/blog/templates/blog/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/henry_homepage/blog/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/henry_homepage/home/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/henry_homepage/henry_homepage/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/henry_homepage/blog/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>

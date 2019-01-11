@@ -1,4 +1,6 @@
 body {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
     background: white url("images/background.png");
 }
 
@@ -26,3 +28,27 @@ ul.errorlist > li {
 .glyphicon-star.active {
     color: #FDB230;
 }
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 1.5rem;
+  color: #777;
+  border-top: 0.05rem solid #e5e5e5;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 3rem 0;
+}
+.marketing p + h4 {
+  margin-top: 1.5rem;
+}
+

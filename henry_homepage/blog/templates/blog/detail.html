@@ -4,7 +4,11 @@ Blog Detail
 {% endblock %}
 
 {% block body %}
-    <h2>
-        This is my detail
-    </h2>
+    <div class='container'>
+        <h2 class='text-center'> {{ post.title }} </h2>
+        <div>
+            <p>Body: {{ post.text }}</p>
+        </div>
+        <p>Create DateTime: {{ post.created_date }}</p>
+    </div>
 {% endblock %}

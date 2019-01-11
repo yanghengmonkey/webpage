@@ -12,7 +12,7 @@ class IndexView(ListView):
     def get_queryset(self):
         return Post.objects.all()
 
-class DetailView(DetailView, pk):
+class DetailView(DetailView):
     model = Post
     template_name = 'blog/detail.html'
 
