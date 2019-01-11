@@ -7,4 +7,11 @@ Henry's Blog
     <h2>
         This is my blog
     </h2>
+    {% for post in all_posts %}
+        <ul>
+            <li href="{% url 'blog:detail' %}">
+                <a>{{ post }}</a>
+            </li>
+        </ul>
+    {% endfor %}
 {% endblock %}
