@@ -3,16 +3,30 @@
 
 {% block body %}
     <div class="row">
-        <!-- PERSONAL INFO -->
-        <div class="col-sm-4">
-            <div class="container-fluid">
-                <img src="{% static 'home/images/explore.jpg' %}" width="256" >
-                <p>Henry Yang</p>
-            </div>
-        </div>
         <!-- SEARCH -->
-        <div class="col-sm-8" style="background: {% static 'home/images/explore.jpg' %}">
-            <a>Search</a>
+        <div class="bg_orl" style="min-height: 600px">
+
+            <div class="masthead">
+                <div class="masthead-bg"></div>
+                <div class="container h-100">
+                    <div class="row h-100">
+                        <div class="col-3 my-auto"></div>
+                        <div class="col-6 my-auto">
+                            <div class="masthead-content text-white py-5 py-md-0">
+                                <br><br><br><br><br>
+                                <div class="input-group">
+                                    <input type="email" class="form-control" placeholder="Search for..." >
+                                    &nbsp;
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-secondary" type="button">&nbsp&nbsp&nbsp Go! &nbsp&nbsp&nbsp</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3 my-auto"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 {% endblock %}
