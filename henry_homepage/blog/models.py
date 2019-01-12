@@ -1,13 +1,16 @@
 from django.db import models
 from django.utils import timezone
+from taggit.managers import TaggableManager
 
 # Create your models here.
 class Post(models.Model):
-    #author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     title = models.CharField( max_length=200)
-    text = models.TextField()
+    author = models.CharField(max_length=50, default='Henry Yang')
     created_date = models.DateTimeField( default= timezone.now )
     published_date = models.DateTimeField( blank=True, null=True)
+    content = models.TextField( default= timezone.now )
+    post_logo = models.FileField(max_length=100, default='', blank=True)
+    tags = TaggableManager()
 
     def publish(self):
         self.published_date = timezone.now()
