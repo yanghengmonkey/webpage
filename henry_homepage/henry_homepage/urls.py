@@ -20,7 +20,7 @@ from django.conf.urls import include
 from django.conf.urls.static import static
 
 urlpatterns = [
-    url('^$', include( ('home.urls', 'home'), namespace='home') ),
+    url('^', include( ('home.urls', 'home'), namespace='home') ),
     url('^blog/', include( ('blog.urls', 'blog'), namespace='blog') ),
     url('admin/', admin.site.urls),
 ]

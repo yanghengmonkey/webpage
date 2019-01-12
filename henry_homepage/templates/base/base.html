@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang='en'>
     <!-- HEAD -->
-    <head>
+    <head class="page-header">
         <meta charset='UTF-8'>
         {% load staticfiles %}
         <link rel='stylesheet' type='text/css' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css' >
@@ -13,7 +13,7 @@
     </head>
     <!-- BODY -->
     <body>
-        <nav class='navbar navbar-inverse'>
+        <nav class='navbar navbar-default'>
             <div class='container-fluid'>
                 <!-- header -->
                 <div class='navbar-header'>
@@ -22,41 +22,78 @@
                         <span class='icon-bar'></span>
                         <span class='icon-bar'></span>
                     </button>
-                    <a class='navbar-brand' href='{% url 'home:index' %}'>Henry</a>
+                    <a href="{% url 'home:index' %}" class="navbar-brand">
+                        Henry
+                        <img  src="{% static 'home/images/henry_head_portrait.jpg' %}" width="48" height="48">
+                    </a>
                 </div>
                 <!-- ITEMS -->
                 <div class='collapse navbar-collapse' id='topNavBar'>
-                    <ui class='nav navbar-nav'>
+                    <ui class='nav navbar-nav navbar-right'>
+                        <!-- Search -->
+                        <form class="navbar-form navbar-left" role="search" method="get" action="#">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="q" value="">
+                            </div>
+                            <button type="submit" class="btn btn-default">
+                                Search
+                            </button>
+                        </form>
+
                         <!-- BLOG -->
-                        <li class=''>
-                            <a href="{% url 'blog:index' %}">
-                                <!-- <img src='{% static 'home/images/henry_head_portrait.jpg' %}' height='16' width='16'> -->
-                                Blog
-                            </a>
-                        </li>
+                            <li class='nav-item'>
+                                <a class='nav-link' href="{% url 'blog:index' %}">
+                                    Blog
+                                </a>
+                            </li>
+                            <li class='nav-item'>
+                                <a class='nav-link' href="{% url 'home:about' %}">
+                                    About
+                                </a>
+                            </li>
+                            <li class='nav-item'>
+                                <a class='nav-link' href="{% url 'home:contact' %}">
+                                    Contact
+                                </a>
+                            </li>
                     </ui>
 
-                    <!-- Search -->
-                    <form class="navbar-form navbar-left" role="search" method="get" action="#">
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="q" value="">
-                        </div>
-                        <button type="submit" class="btn btn-default">
-                            Search
-                        </button>
-                    </form>
 
                 </div>
             </div>
         </nav>
+        <!-- Page Header -->
+        {% block page_header %}
+        <header class="masthead" style="background-color: rgb(46,94,168)">
+            <div class="overlay"></div>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                  <div class="site-heading">
+                    {% block page_header_content %}
+                    <h1 class="text-center" style="color: white"> Welcome to Henry's Homepage</h1>
+                    {% endblock %}
+                  </div>
+                </div>
+              </div>
+            </div>
+        </header>
+        {% endblock %}
         <!-- user define body -->
         {% block body %}
         {% endblock %}
     </body>
 
-    <footer class='footer'>
-        {% block footer %}
-            <p>Henry: yanghengmonkey@gmail.com</p>
-        {% endblock %}
+    <hr>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            {% block footer %}
+            <p class="copyright text-muted">Copyright &copy; yanghengmonkey@icloud.com 2018</p>
+            {% endblock %}
+        </div>
     </footer>
+
 </html>
