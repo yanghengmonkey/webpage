@@ -5,10 +5,33 @@ Blog Detail
 
 {% block body %}
     <div class='container'>
-        <h2 class='text-center'> {{ post.title }} </h2>
-        <div>
-            <p>Body: {{ post.text }}</p>
+        <div class="row">
+
+            <!-- POST -->
+            <div class="col-sm-8">
+                <!-- Title -->
+                <h1>{{ post.title }}</h1>
+
+                <!-- Author -->
+
+                <!-- Date/Time -->
+                <p>Posted on {{ post.published_date }}</p>
+                <hr>
+
+                <!-- Preview Image -->
+                <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
+                <hr>
+
+                <!-- Post Content -->
+                <p clas="lead">{{ post.text }}</p>
+            </div>
+            <!-- END OF POST -->
+
+            <div class="col-sm-4">
+                {% include 'blog/search_card.html' %}
+                {% include 'blog/category_card.html' %}
+            </div>
         </div>
-        <p>Create DateTime: {{ post.created_date }}</p>
+
     </div>
 {% endblock %}

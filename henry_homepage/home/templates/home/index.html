@@ -1,7 +1,18 @@
 {% extends 'base/base.html' %}
+{% load staticfiles %}
 
 {% block body %}
-    <h2>
-        This is my home page
-    </h2>
+    <div class="row">
+        <!-- PERSONAL INFO -->
+        <div class="col-sm-4">
+            <div class="container-fluid">
+                <img src="{% static 'home/images/explore.jpg' %}" width="256" >
+                <p>Henry Yang</p>
+            </div>
+        </div>
+        <!-- SEARCH -->
+        <div class="col-sm-8" style="background: {% static 'home/images/explore.jpg' %}">
+            <a>Search</a>
+        </div>
+    </div>
 {% endblock %}

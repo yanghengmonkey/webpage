@@ -8,14 +8,42 @@ Henry's Blog
 {% endblock %}
 
 {% block body %}
-    <div class='list-group'>
-         {% for post in all_posts %}
-             <div class='list-group-item:first-child'>
-                 <h2>{{ post.title }}</h2>
-                 <a href="{% url 'blog:detail' post.id %}" class="btn btn-primary btn-sm" role="button">
-                     View Detail
-                 </a>
-             </div>
-         {% endfor %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <!-- Blog Post -->
+                {% for post in all_posts %}
+                <div class="card mb-4">
+                    <!--
+                    <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+                    -->
+                    <div class="card-body">
+                        <h2 class="card-title">{{ post.title }}</h2>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
+                        <a href="{% url 'blog:detail' post.id %}" class="btn btn-primary">View Detail &rarr;</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Posted on {{ post.published_date }}
+                    </div>
+                </div>
+                {% endfor %}
+                <!-- Pagination -->
+                <ul class="pagination justify-content-center mb-4">
+                    <li class="page-item">
+                        <a class="page-link" href="#">&larr; Older</a>
+                    </li>
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#">Newer &rarr;</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-sm-4">
+                {% include 'blog/search_card.html' %}
+                {% include 'blog/category_card.html' %}
+            </div>
+        </div>
+
     </div>
+
 {% endblock %}

@@ -1,67 +1,66 @@
 <!DOCTYPE html>
 <html lang='en'>
     <!-- HEAD -->
+    {% block head %}
     <head class="page-header">
+        <title>{% block title %}Henry{% endblock %}</title>
+        {% block head_content %}
         <meta charset='UTF-8'>
         {% load staticfiles %}
-        <link rel='stylesheet' type='text/css' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css' >
-        <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Satisfy' >
-        <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js'></script>
-        <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
-        <link rel='stylesheet' type='text/css' href='{% static 'home/style.css' %}'>
-        <title>{% block title %}Henry{% endblock %}</title>
+        <link rel='stylesheet' type='text/css' href="{% static 'vendor/bootstrap/css/bootstrap.css' %}" >
+        <link rel='stylesheet' type='text/css' href="{% static 'home/home_style.css' %}" >
+        <!-- Boostrap core JavaScript -->
+        <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+        <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+        {% endblock %}
     </head>
+    {% endblock %}
     <!-- BODY -->
+    {% block page %}
     <body>
-        <nav class='navbar navbar-default'>
+        <!-- Navigation -->
+        {% block nav %}
+        <nav class="navbar-height-80px navbar-expand-lg navbar-dark bg-dark">
             <div class='container-fluid'>
                 <!-- header -->
-                <div class='navbar-header'>
-                    <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='#topNavBar'>
-                        <span class='icon-bar'></span>
-                        <span class='icon-bar'></span>
-                        <span class='icon-bar'></span>
-                    </button>
-                    <a href="{% url 'home:index' %}" class="navbar-brand">
-                        Henry
-                        <img  src="{% static 'home/images/henry_head_portrait.jpg' %}" width="48" height="48">
-                    </a>
-                </div>
+                <a href="{% url 'home:index' %}" class="float-left text-center">
+                    <img  src="{% static 'home/images/henry_head_portrait.jpg' %}" class='rounded-circle' width="96" height="96">
+                    <br>
+                    <font face='Satisfy' color="white">Henry Yang</font>
+                </a>
+                <!-- -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavBar" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class='navbar-toggler-icon'></span>
+                </button>
                 <!-- ITEMS -->
                 <div class='collapse navbar-collapse' id='topNavBar'>
-                    <ui class='nav navbar-nav navbar-right'>
-                        <!-- Search -->
-                        <form class="navbar-form navbar-left" role="search" method="get" action="#">
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="q" value="">
-                            </div>
-                            <button type="submit" class="btn btn-default">
-                                Search
-                            </button>
-                        </form>
-
+                    <ui class='nav navbar-nav ml-auto'>
                         <!-- BLOG -->
-                            <li class='nav-item'>
-                                <a class='nav-link' href="{% url 'blog:index' %}">
-                                    Blog
-                                </a>
-                            </li>
-                            <li class='nav-item'>
-                                <a class='nav-link' href="{% url 'home:about' %}">
-                                    About
-                                </a>
-                            </li>
-                            <li class='nav-item'>
-                                <a class='nav-link' href="{% url 'home:contact' %}">
-                                    Contact
-                                </a>
-                            </li>
+                        <li class='nav-item'>
+                            <a class='nav-link' href="{% url 'blog:index' %}">
+                                Blog
+                            </a>
+                        </li>
+                        <!-- ABOUT -->
+                        <li class='nav-item'>
+                            <a class='nav-link' href="{% url 'home:about' %}">
+                                About
+                            </a>
+                        </li>
+                        <!-- CONTACT -->
+                        <li class='nav-item'>
+                            <a class='nav-link' href="{% url 'home:contact' %}">
+                                Contact
+                            </a>
+                        </li>
                     </ui>
 
 
                 </div>
             </div>
         </nav>
+        <!-- endblock nav -->
+        {% endblock %}
         <!-- Page Header -->
         {% block page_header %}
         <header class="masthead" style="background-color: rgb(46,94,168)">
@@ -82,18 +81,20 @@
         <!-- user define body -->
         {% block body %}
         {% endblock %}
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container fixed-bottom">
+                {% block footer %}
+                <p class="copyright text-muted text-right">Copyright &copy; yanghengmonkey@icloud.com 2018</p>
+                {% endblock %}
+            </div>
+        </footer>
+
     </body>
-
-    <hr>
-
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            {% block footer %}
-            <p class="copyright text-muted">Copyright &copy; yanghengmonkey@icloud.com 2018</p>
-            {% endblock %}
-        </div>
-    </footer>
+    <!-- endblock page -->
+    {% endblock %}
 
 </html>
