@@ -45,7 +45,10 @@
                     {% endif %}
 
                     <!-- Post Content -->
+                    {% comment "used for tinymce"%}
                     <p clas="card-body">{{ post.content|safe }}</p>
+                    {% endcomment %}
+                    <p clas="card-body">{{ post.formatted_markdown|safe }}</p>
                     <hr>
 
                     <!-- TAGS -->

@@ -24,6 +24,7 @@ urlpatterns = [
     url('^blog/', include( ('blog.urls', 'blog'), namespace='blog') ),
     url('admin/', admin.site.urls),
     url(r'^tinymce/', include('tinymce.urls') ),
+    url(r'^markdownx/', include('markdownx.urls') ),
 ]
 
 if settings.DEBUG:
