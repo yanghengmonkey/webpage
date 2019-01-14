@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'blog',
     'home',
     'taggit',
+    'tinymce',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

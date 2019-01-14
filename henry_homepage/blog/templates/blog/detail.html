@@ -45,7 +45,7 @@
                     {% endif %}
 
                     <!-- Post Content -->
-                    <p clas="card-body">{{ post.content|linebreaks }}</p>
+                    <p clas="card-body">{{ post.content|safe }}</p>
                     <hr>
 
                     <!-- TAGS -->
