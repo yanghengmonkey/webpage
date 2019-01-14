@@ -1,26 +1,27 @@
+{% comment "" %}
+NOTE: Input is tags include all tag from taggit.objects.all()
+{% endcomment %}
+
 <!-- Categories -->
 <div class="card my-4">
      <h5 class="card-header">Categories</h5>
      <div class="card-body">
+         {% for tag in tags %}
+         {% if forloop.counter0|divisibleby:2 %}
          <div class="row">
+         {% endif %}
              <div class="col-lg-6">
                  <ul class="list-unstyled mb-0">
                      <li>
-                         <a href="#">Vim</a>
-                     </li>
-                     <li>
-                         <a href="#">Python</a>
+                         <a href="{% url 'blog:tagpage' tag %}">{{ tag }}</a>
                      </li>
                  </ul>
              </div>
-             <div class="col-lg-6">
-                 <ul class="list-unstyled mb-0">
-                     <li>
-                         <a href="#">System Verilog</a>
-                     </li>
-                 </ul>
-             </div>
+         {% if forloop.counter|divisibleby:2 or forloop.last %}
          </div>
+         {% endif %}
+         {% endfor %}
      </div>
+    <br>
 </div>
 <!-- End Of Categories -->

@@ -1,0 +1,37 @@
+{% extends 'base/base.html' %}
+{% block title %}
+Henry's Blog
+{% endblock %}
+
+{% block page_header_content %}
+<h1 class="text-center" style="color: white"> Welcome to Henry's Blog</h1>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <!-- MAIN BODY -->
+        <div class="col-sm-8">
+            <div class="card my-4">
+                <h1 class="card-header">Delete Post</h1>
+                <h2 class="card-body">
+                    Are you sure want to delte the post?<br>
+                    <span style="color:blue">{{ post.title }}</span>
+                </h2>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <button class="btn btn-outline-danger" type="submit">Yes, Delete</button>
+                        <a class="btn btn-outline-secondary" href="{% url 'blog:detail' post.id %}">Cancel</a>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+        <!-- SIDEBAR -->
+        {% include 'blog/sidebar.html' %}
+    </div>
+
+</div>
+
+{% endblock %}

@@ -21,6 +21,7 @@ body {
     -webkit-background-size: cover;
     -moz-background-size: cover;
 }
+/* Get plyphicon from https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css */
 @font-face {
   font-family: 'Glyphicons Halflings';
 

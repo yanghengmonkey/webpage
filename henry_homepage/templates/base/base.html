@@ -20,7 +20,7 @@
     <body>
         <!-- Navigation -->
         {% block nav %}
-        <nav class="navbar-height-80px navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar-expand-lg navbar-dark bg-dark" style="height:50px">
             <div class='container-fluid'>
                 <!-- header -->
                 <a href="{% url 'home:index' %}" class="float-left text-center">
@@ -63,18 +63,18 @@
         {% endblock %}
         <!-- Page Header -->
         {% block page_header %}
-        <header class="masthead" style="background-color: rgb(46,94,168)">
+        <header class="masthead" style="background-color: rgb(46,94,168); height:80px">
             <div class="overlay"></div>
             <div class="container">
-              <div class="row">
-                <div class="col-lg-8 col-md-10 mx-auto">
-                  <div class="site-heading">
-                    {% block page_header_content %}
-                    <h1 class="text-center" style="color: white"> Welcome to Henry's Homepage</h1>
-                    {% endblock %}
-                  </div>
+                <div class="row">
+                    <div class="col-lg-8 col-md-10 mx-auto">
+                        <div class="site-heading">
+                          {% block page_header_content %}
+                          <h1 class="text-center" style="color: white"> Welcome to Henry's Homepage</h1>
+                          {% endblock %}
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
         </header>
         {% endblock %}
@@ -91,7 +91,7 @@
     <footer>
         <div class="container fixed-bottom">
             {% block footer %}
-            <p class="copyright text-muted text-right">Copyright &copy; yanghengmonkey@icloud.com 2018</p>
+            <p class="copyright text-muted text-right">Copyright &copy; yanghengmonkey@icloud.com 2019</p>
             {% endblock %}
         </div>
     </footer>

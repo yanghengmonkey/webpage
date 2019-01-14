@@ -1,0 +1,20 @@
+{% comment "" %}
+NOTE: Input is tags include all tag from taggit.objects.all()
+{% endcomment %}
+
+<!-- ADD -->
+<div class="card my-4">
+    <h5 class="card-header">Operation</h5>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-sm-6">
+                <a class="btn btn-info " href="{% url 'blog:create' %}">
+                    <span class="glyphicon glyphicon-plus">AddPost</span>
+                </a>
+            </div>
+            <div class="col-sm-6">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Of ADD -->
