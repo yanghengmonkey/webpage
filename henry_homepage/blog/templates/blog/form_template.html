@@ -1,16 +1,27 @@
-{% for field in form %}
-    <div class='form-group'>
-        <div class='col-sm-offset-2 col-sm-10'>
-            <span class='text-danger small'>{{ field.errors }}</span>
+{% extends 'base/base.html' %}
+
+{% load formadmin_filters %}
+
+{% block title %}
+Create
+{% endblock %}
+
+{% block page_header_content %}
+<h1 class="text-center" style="color: white"> Create Post</h1>
+{% endblock %}
+
+{% block body %}
+<div class="content-section">
+
+    <form class='form-horizontal' action='' method='post' enctype='mulipart/form-data'>
+        {% csrf_token %}
+
+        {{ form|as_django_admin }}
+
+        <div class="form-group" >
+            <button class="btn btn-outline-info" type="submit"> Publish </button>
         </div>
+    </form>
 
-        <label class='control-label col-sm-2'>
-            {{ field.label_tag }}
-        </label>
-
-        <div class='col-sm-10'>
-            {{ field }}
-        </div>
-    </div>
-{% endfor %}
-
+</div>
+{% endblock %}

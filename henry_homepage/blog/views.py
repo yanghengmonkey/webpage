@@ -35,25 +35,15 @@ class PostDetailView(DetailView):
 
 class PostCreateView(CreateView):
     model = Post
-    template_name = 'blog/create.html'
-    fields = [
-        'author'
-        ,'title'
-        ,'content'
-        ,'created_date'
-        ,'published_date'
-    ]
+    template_name = 'blog/form_template.html'
+    fields = '__all__'
 
 class PostUpdateView(UpdateView):
     model = Post
-    template_name = 'blog/create.html'
-    fields = [
-        'author'
-        ,'title'
-        ,'content'
-        ,'created_date'
-        ,'published_date'
-    ]
+    template_name = 'blog/form_template.html'
+    fields = '__all__'
+
+
 
 class PostDeleteView(DeleteView):
     model = Post

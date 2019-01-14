@@ -1,4 +1,5 @@
 {% extends 'base/base.html' %}
+{% load martortags %}
 {% block title %}
 {{ post.title }}
 {% endblock %}
@@ -47,8 +48,10 @@
                     <!-- Post Content -->
                     {% comment "used for tinymce"%}
                     <p clas="card-body">{{ post.content|safe }}</p>
-                    {% endcomment %}
+
                     <p clas="card-body">{{ post.formatted_markdown|safe }}</p>
+                    {% endcomment %}
+                    <p clas="card-body">{{ post.content|safe_markdown }}</p>
                     <hr>
 
                     <!-- TAGS -->

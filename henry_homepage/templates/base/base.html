@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load martortags %}
 <html lang='en'>
     <!-- HEAD -->
     {% block head %}
@@ -9,6 +10,12 @@
         {% load staticfiles %}
         <link rel='stylesheet' type='text/css' href="{% static 'vendor/bootstrap/css/bootstrap.css' %}" >
         <link rel='stylesheet' type='text/css' href="{% static 'home/home_style.css' %}" >
+        <link href="{% static 'admin/css/forms.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'vendor/plugins/css/ace.min.css' %}" type="text/css" media="all" rel="stylesheet" />
+        <link href="{% static 'vendor/plugins/css/semantic.min.css' %}" type="text/css" media="all" rel="stylesheet" />
+        <link href="{% static 'vendor/plugins/css/resizable.min.css' %}" type="text/css" media="all" rel="stylesheet" />
+        <link href="{% static 'vendor/martor/css/martor.min.css' %}" type="text/css" media="all" rel="stylesheet" />
+        <script type="text/javascript" src="/admin/jsi18n/"></script>
         <!-- Boostrap core JavaScript -->
         <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
         <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
@@ -17,6 +24,17 @@
         <script src="{% static 'vendor/tinymce/js/tinymce/tinymce.min.js' %}"></script>
         <script type="text/javascript" src="{% static 'vendor/tinymce/js/tinymce/custom.js' %}" ></script>
         {% endcomment %}
+        <script type="text/javascript" src="{% static 'vendor/plugins/js/jquery.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'vendor/plugins/js/ace.js' %}"></script>
+        <script type="text/javascript" src="{% static 'vendor/plugins/js/semantic.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'vendor/plugins/js/mode-markdown.js' %}"></script>
+        <script type="text/javascript" src="{% static 'vendor/plugins/js/ext-language_tools.js' %}"></script>
+        <script type="text/javascript" src="{% static 'vendor/plugins/js/theme-github.js' %}"></script>
+        <script type="text/javascript" src="{% static 'vendor/plugins/js/highlight.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'vendor/plugins/js/resizable.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'vendor/plugins/js/emojis.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'vendor/martor/js/martor.min.js' %}"></script>
+
         {% endblock %}
     </head>
     {% endblock %}

@@ -1,3 +1,4 @@
+{% load martortags %}
 <div class="card mb-4">
     {% if post.post_logo != '' %}
     <a href="{% url 'blog:detail' post.id %}">
@@ -12,8 +13,9 @@
         {% comment "used for tinymce"%}
         <p clas="card-body">{{ post.content|safe }}</p>
         <p class="card-text">{{ post.content|safe|truncatewords_html:20 }}</p>
-        {% endcomment %}
         <p clas="card-body">{{ post.formatted_markdown|safe|truncatewords_html:20 }}</p>
+        {% endcomment %}
+        <p clas="card-body">{{ post.content|safe_markdown|truncatewords_html:20 }}</p>
         {% for tag in post.tags.all %}
         <a href="{% url 'blog:tagpage' tag %}">{{ tag }}
             {% if not forloop.last %},{% endif %}

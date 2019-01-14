@@ -23,8 +23,9 @@ urlpatterns = [
     url('^', include( ('home.urls', 'home'), namespace='home') ),
     url('^blog/', include( ('blog.urls', 'blog'), namespace='blog') ),
     url('admin/', admin.site.urls),
-    url(r'^tinymce/', include('tinymce.urls') ),
-    url(r'^markdownx/', include('markdownx.urls') ),
+    #url(r'^tinymce/', include('tinymce.urls') ),
+    #url(r'^markdownx/', include('markdownx.urls') ),
+    url(r'^martor/', include('martor.urls') ),
 ]
 
 if settings.DEBUG:
