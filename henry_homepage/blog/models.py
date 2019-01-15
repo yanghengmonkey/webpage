@@ -23,6 +23,10 @@ class Post(models.Model):
         self.published_date = timezone.now()
         self.save()
 
+    def save(self, *args, **kwargs):
+        self.published_date = timezone.now()
+        super().save(*args, **kwargs)  # Call the "real" save() method.
+
     #@property
     #def formatted_markdown(self):  # <--- We'll need this for views.py later
     #    return markdownify(self.content)

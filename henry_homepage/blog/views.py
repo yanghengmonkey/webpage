@@ -6,6 +6,8 @@ from django.shortcuts import render, render_to_response
 from django.core.paginator import Paginator
 from django.db.models import Q
 from taggit.models import  Tag
+from django import forms
+from django.forms.models import modelform_factory
 from . models import Post
 
 class IndexView(ListView):
@@ -35,13 +37,25 @@ class PostDetailView(DetailView):
 
 class PostCreateView(CreateView):
     model = Post
-    template_name = 'blog/form_template.html'
-    fields = '__all__'
+    template_name_suffix = '_template'
+
+    form_class = modelform_factory(Post,
+            exclude=['created_date', 'published_date'],
+            widgets = {'title': forms.TextInput(attrs={'size':100}),
+                       'author': forms.TextInput(attrs={'size':100}),
+                      }
+            )
 
 class PostUpdateView(UpdateView):
     model = Post
-    template_name = 'blog/form_template.html'
-    fields = '__all__'
+    template_name_suffix = '_template'
+
+    form_class = modelform_factory(Post,
+            exclude=['created_date', 'published_date'],
+            widgets = {'title': forms.TextInput(attrs={'size':100}),
+                       'author': forms.TextInput(attrs={'size':100}),
+                      }
+            )
 
 
 
