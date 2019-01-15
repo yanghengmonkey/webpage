@@ -4,6 +4,8 @@
     <!-- HEAD -->
     {% block head %}
     <head class="page-header">
+       {% block head_content %}
+
         <title>{% block title %}Henry{% endblock %}</title>
 
         <meta charset='UTF-8'>
@@ -42,9 +44,11 @@
         <script type="text/javascript" src="{% static 'vendor/plugins/js/resizable.min.js' %}"></script>
         <script type="text/javascript" src="{% static 'vendor/plugins/js/emojis.min.js' %}"></script>
         <script type="text/javascript" src="{% static 'vendor/martor/js/martor.min.js' %}"></script>
-        {% endblock %}
+        {% endblock %} <!-- head_base_script -->
+
+        {% endblock %} <!-- block content -->
     </head>
-    {% endblock %}
+    {% endblock %} <!-- block head -->
     <!-- BODY -->
     {% block page %}
     <body>
