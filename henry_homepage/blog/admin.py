@@ -5,10 +5,11 @@ from django.db import models
 from martor.widgets import AdminMartorWidget
 from martor.models import MartorField
 from . models import Post
-from . forms import PostCharForm
+from .forms import PostAdminForm
 
 # Register your models here.
 class PostAdmin(admin.ModelAdmin):
+#    form = PostAdminForm
     formfield_overrides = {
             models.CharField: {'widget': TextInput(attrs={'size': '100'})},
             MartorField: {'widget': AdminMartorWidget},
