@@ -24,10 +24,16 @@ class IndexView(ListView):
         # Filter by tag
         if( 'tag' in self.kwargs.keys() ):
             post_list = Post.objects.filter(tags__name=self.kwargs['tag']).order_by('-published_date')
+            '''
+            self.template_name = 'search/search_page.html'
+            query = self.request.GET.get('q')
+            post_list = SearchQuerySet().autocomplete(tags=query).order_by('-published_date')
+            '''
         elif( self.request.GET.get('q') ):
             self.template_name = 'search/search_page.html'
             query = self.request.GET.get('q')
-            post_list = SearchQuerySet().autocomplete(content_auto=query)
+            #post_list = SearchQuerySet().autocomplete(content_auto=query)
+            post_list = SearchQuerySet().autocomplete(content__contains=query).order_by('-published_date')
         else:
             post_list = Post.objects.all().order_by('-published_date')
         return post_list
