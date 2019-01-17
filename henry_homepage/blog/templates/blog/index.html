@@ -4,7 +4,11 @@ Henry's Blog
 {% endblock %}
 
 {% block page_header_content %}
-    <h1 class="text-center" style="color: white"> Welcome to Henry's Blog</h1>
+    {% if page_header_message %}
+        <h1 class="text-center" style="color: white">{{ page_header_message }}</h1>
+    {% else %}
+        <h1 class="text-center" style="color: white"> Welcome to Henry's Blog</h1>
+    {% endif %}
 {% endblock %}
 
 {% block body %}

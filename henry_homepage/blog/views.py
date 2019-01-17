@@ -8,6 +8,9 @@ from django.db.models import Q
 from taggit.models import  Tag
 from django import forms
 from django.forms.models import modelform_factory
+from haystack.query import SearchQuerySet
+from haystack.inputs import AutoQuery, Exact, Clean
+from haystack.generic_views import SearchView
 from . models import Post
 
 class IndexView(ListView):
@@ -15,13 +18,37 @@ class IndexView(ListView):
     template_name = 'blog/index.html'
     context_object_name = 'posts'
     paginate_by = 5
-    ordering = ['-published_date']
+
+    def get_queryset(self):
+        self.template_name = 'blog/index.html'
+        # Filter by tag
+        if( 'tag' in self.kwargs.keys() ):
+            post_list = Post.objects.filter(tags__name=self.kwargs['tag']).order_by('-published_date')
+        elif( self.request.GET.get('q') ):
+            self.template_name = 'search/search_page.html'
+            query = self.request.GET.get('q')
+            post_list = SearchQuerySet().autocomplete(content_auto=query)
+        else:
+            post_list = Post.objects.all().order_by('-published_date')
+        return post_list
 
     def get_context_data(self, **kwargs):
+        # Variable
+        page_header_message = ''
         # Call the base implementation first to get a context
         context = super().get_context_data(**kwargs)
         # Add in a QuerySet of all the books
         context['tags'] = Tag.objects.all()
+        #
+        if( 'tag' in self.kwargs.keys() ):
+            page_header_message = "Posts tagged by " + self.kwargs['tag']
+            context['tag'] = self.kwargs['tag']
+        elif( self.request.GET.get('q') ):
+            page_header_message = "Posts contains " + self.request.GET.get('q')
+            context['query'] = self.request.GET.get('q')
+        else:
+            page_header_message = "Welcome to Henry's Blog"
+        context['page_header_message'] = page_header_message
         return context
 
 class PostDetailView(DetailView):
@@ -57,39 +84,9 @@ class PostUpdateView(UpdateView):
                       }
             )
 
-
-
 class PostDeleteView(DeleteView):
     model = Post
     # FIXME: no use of the template_name
     template_name = 'blog/confirm_delete.html'
     success_url = reverse_lazy( 'blog:index' )
-
-# TEMP
-def tagpage(request, tag):
-    post_list = Post.objects.filter(tags__name=tag)
-    paginator = Paginator(post_list, 2)
-
-    page = request.GET.get('page')
-    context = {
-        'posts': paginator.get_page(page),
-        'tags' : Tag.objects.all(),
-        'tag' : tag
-    }
-    return render_to_response("blog/tagpage.html",  context )
-
-
-def search(request):
-    template_name = 'blog/search_page.html'
-    query = request.GET.get('q')
-    post_list = Post.objects.filter(Q(title__icontains=query) | Q(content__icontains=query))
-    paginator = Paginator(post_list, 2)
-    page = request.GET.get('page')
-
-    context = {
-        'posts': paginator.get_page(page),
-        'query': query,
-        'tags' : Tag.objects.all()
-    }
-    return render(request, template_name, context)
 

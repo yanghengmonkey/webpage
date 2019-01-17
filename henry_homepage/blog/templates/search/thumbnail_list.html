@@ -1,0 +1,7 @@
+<!-- Blog Post -->
+{% for post in object_list %}
+    {% include 'search/thumbnail.html' %}
+{% endfor %}
+<!-- Pagination -->
+{% include 'search/paginator.html' %}
+<br>
