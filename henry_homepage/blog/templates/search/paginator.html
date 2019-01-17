@@ -4,23 +4,23 @@
     <span class="step-links">
         <!-- PREVIOUS -->
         {% if page_obj.has_previous %}
-            <a class="btn btn-outline-info mb-4" href="?page=1&q={{query}}">&laquo; first</a>
-            <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.previous_page_number }}&q={{query}}">previous</a>
+            <a class="btn btn-outline-info mb-4" href="?q={{query}}&page=1">&laquo; first</a>
+            <a class="btn btn-outline-info mb-4" href="?q={{query}}&page={{ page_obj.previous_page_number }}">previous</a>
         {% endif %}
 
         <!-- CURRENT RANGE -->
         {% for num in page_obj.paginator.page_range %}
             {% if page_obj.number == num %}
-                <a class="btn btn-info mb-4" href="?page={{ num }}&q={{query}}">{{ num }}</a>
+                <a class="btn btn-info mb-4" href="?q={{query}}&page={{ num }}">{{ num }}</a>
             {% elif num > page_obj.number|add:"-3" or num < page_obj.number|add:"3"%}
-                <a class="btn btn-outline-info mb-4" href="?page={{ num }}&q={{query}}">{{ num }}</a>
+                <a class="btn btn-outline-info mb-4" href="?q={{query}}&page={{ num }}">{{ num }}</a>
             {% endif %}
         {% endfor %}
 
         <!-- NEXT -->
         {% if page_obj.has_next %}
-            <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}&q={{query}}">next</a>
-            <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}&q={{query}}">last &raquo;</a>
+            <a class="btn btn-outline-info mb-4" href="?q={{query}}&page={{ page_obj.next_page_number }}">next</a>
+            <a class="btn btn-outline-info mb-4" href="?q={{query}}&page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
         {% endif %}
     </span>
     {% endif %}
