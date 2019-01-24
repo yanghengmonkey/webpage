@@ -73,7 +73,7 @@ class PostCreateView(CreateView):
     template_name_suffix = '_template'
 
     form_class = modelform_factory(Post,
-            exclude=['created_date', 'published_date'],
+            exclude=['post_logo', 'created_date', 'published_date'],
             widgets = {'title': forms.TextInput(attrs={'size':100}),
                        'author': forms.TextInput(attrs={'size':100}),
                       }
@@ -84,7 +84,7 @@ class PostUpdateView(UpdateView):
     template_name_suffix = '_template'
 
     form_class = modelform_factory(Post,
-            exclude=['created_date', 'published_date'],
+            exclude=['post_logo', 'created_date', 'published_date'],
             widgets = {'title': forms.TextInput(attrs={'size':100}),
                        'author': forms.TextInput(attrs={'size':100}),
                       }
