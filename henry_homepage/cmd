@@ -1,2 +1,1 @@
-cd webpage/henry_webpage
 python manage.py runserver 0.0.0.0:8000
